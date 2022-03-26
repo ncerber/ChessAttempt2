@@ -62,60 +62,77 @@ public class King extends ChessPiece {
 
             tLine = line - 1;
             tColumn = column - 2;
-            tPiece = board.board[tLine][tColumn];
             inBoard = tLine > 0 && tLine < 8 && tColumn > 0 && tColumn < 8;
-            if (inBoard && tPiece != null && tPiece.getSymbol().equals("H") && !tPiece.getColor().equals(color))
-                return true;
+            if (inBoard) {
+                tPiece = board.board[tLine][tColumn];
+                if (inBoard && tPiece != null && tPiece.getSymbol().equals("H") && !tPiece.getColor().equals(color))
+                    return true;
+            }
 
             tLine = line - 2;
             tColumn = column - 1;
-            tPiece = board.board[tLine][tColumn];
             inBoard = tLine > 0 && tLine < 8 && tColumn > 0 && tColumn < 8;
-            if (inBoard && tPiece != null && tPiece.getSymbol().equals("H") && !tPiece.getColor().equals(color))
-                return true;
+            if (inBoard) {
+                tPiece = board.board[tLine][tColumn];
+                if (inBoard && tPiece != null && tPiece.getSymbol().equals("H") && !tPiece.getColor().equals(color))
+                    return true;
+            }
 
             tLine = line - 2;
             tColumn = column + 1;
-            tPiece = board.board[tLine][tColumn];
             inBoard = tLine > 0 && tLine < 8 && tColumn > 0 && tColumn < 8;
-            if (inBoard && tPiece != null && tPiece.getSymbol().equals("H") && !tPiece.getColor().equals(color))
-                return true;
+            if (inBoard) {
+                tPiece = board.board[tLine][tColumn];
+                if (inBoard && tPiece != null && tPiece.getSymbol().equals("H") && !tPiece.getColor().equals(color))
+                    return true;
+            }
 
             tLine = line - 1;
             tColumn = column + 2;
-            tPiece = board.board[tLine][tColumn];
             inBoard = tLine > 0 && tLine < 8 && tColumn > 0 && tColumn < 8;
-            if (inBoard && tPiece != null && tPiece.getSymbol().equals("H") && !tPiece.getColor().equals(color))
-                return true;
+            if (inBoard) {
+                tPiece = board.board[tLine][tColumn];
+                if (inBoard && tPiece != null && tPiece.getSymbol().equals("H") && !tPiece.getColor().equals(color))
+                    return true;
+            }
+
 
             tLine = line + 1;
             tColumn = column + 2;
-            tPiece = board.board[tLine][tColumn];
             inBoard = tLine > 0 && tLine < 8 && tColumn > 0 && tColumn < 8;
-            if (inBoard && tPiece != null && tPiece.getSymbol().equals("H") && !tPiece.getColor().equals(color))
-                return true;
+            if (inBoard) {
+                tPiece = board.board[tLine][tColumn];
+                if (inBoard && tPiece != null && tPiece.getSymbol().equals("H") && !tPiece.getColor().equals(color))
+                    return true;
+            }
 
             tLine = line + 2;
             tColumn = column + 1;
-            tPiece = board.board[tLine][tColumn];
             inBoard = tLine > 0 && tLine < 8 && tColumn > 0 && tColumn < 8;
-            if (inBoard && tPiece != null && tPiece.getSymbol().equals("H") && !tPiece.getColor().equals(color))
-                return true;
+            if (inBoard) {
+                tPiece = board.board[tLine][tColumn];
+                if (inBoard && tPiece != null && tPiece.getSymbol().equals("H") && !tPiece.getColor().equals(color))
+                    return true;
+            }
 
             tLine = line + 2;
             tColumn = column - 1;
-            tPiece = board.board[tLine][tColumn];
             inBoard = tLine > 0 && tLine < 8 && tColumn > 0 && tColumn < 8;
-            if (inBoard && tPiece != null && tPiece.getSymbol().equals("H") && !tPiece.getColor().equals(color))
-                return true;
+            if (inBoard) {
+                tPiece = board.board[tLine][tColumn];
+                if (inBoard && tPiece != null && tPiece.getSymbol().equals("H") && !tPiece.getColor().equals(color))
+                    return true;
+            }
+
 
             tLine = line + 1;
             tColumn = column - 2;
-            tPiece = board.board[tLine][tColumn];
             inBoard = tLine > 0 && tLine < 8 && tColumn > 0 && tColumn < 8;
-            if (inBoard && tPiece != null && tPiece.getSymbol().equals("H") && !tPiece.getColor().equals(color))
-                return true;
-
+            if (inBoard) {
+                tPiece = board.board[tLine][tColumn];
+                if (inBoard && tPiece != null && tPiece.getSymbol().equals("H") && !tPiece.getColor().equals(color))
+                    return true;
+            }
             return false;
         }
 
