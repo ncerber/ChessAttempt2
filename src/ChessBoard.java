@@ -18,7 +18,8 @@ public class ChessBoard {
             if (board[startLine][startColumn].canMoveToPosition(this, startLine, startColumn, endLine, endColumn)) {
 
                 if (board[startLine][startColumn].getSymbol().equals("K") ||  // check position for castling
-                        board[startLine][startColumn].getSymbol().equals("R")) {
+                        board[startLine][startColumn].getSymbol().equals("R") ||
+                        board[startLine][startColumn].getSymbol().equals("P")) {
                     board[startLine][startColumn].check = false;
                 }
 
