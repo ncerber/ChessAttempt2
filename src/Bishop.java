@@ -18,8 +18,13 @@ public class Bishop extends ChessPiece {
         for (int i = 0; i < 8; i++) {
             tLine += vIterator;
             tColumn += gIterator;
-            if (tLine == toLine && tColumn == toColumn) return true;
-            if (tLine == toLine | tColumn == toColumn) return false;
+            boolean isNotEmpty = chessBoard.board[tLine][tColumn] != null;
+            boolean isEnemy = isNotEmpty && !chessBoard.board[tLine][tColumn].getColor().equals(color);
+            if (tLine == toLine && tColumn == toColumn) {
+                if (isEnemy) return true;
+                return !isNotEmpty;
+            }
+            if (tLine == toLine || tColumn == toColumn || isNotEmpty) return false;
         }
 
         return false;
