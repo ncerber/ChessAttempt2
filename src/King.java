@@ -12,7 +12,9 @@ public class King extends ChessPiece {
     public boolean canMoveToPosition(ChessBoard chessBoard, int line, int column, int toLine, int toColumn) {
         if (!isPositionCorrect(line, column, toLine, toColumn)) return false;
 
-        return Math.abs(line - toLine) <= 1 && Math.abs(column - toColumn) <= 1;
+        boolean isNotEmpty = chessBoard.board[toLine][toColumn] != null;
+        boolean isNotEnemy = isNotEmpty && chessBoard.board[toLine][toColumn].getColor().equals(color);
+        return Math.abs(line - toLine) <= 1 && Math.abs(column - toColumn) <= 1 && !isNotEnemy;
     }
 
     @Override

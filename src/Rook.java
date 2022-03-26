@@ -33,12 +33,14 @@ public class Rook extends ChessPiece {
 
         int tLine = line;
         int tColumn = column;
+        boolean isNullCell;
         for (int i = 0; i < 8; i++) {
             tLine += vIterator;
             tColumn += hIterator;
-            if(tLine == toLine && tColumn == toColumn) return true;
-            if(tLine>7 | tLine<0) break;
-            if(tColumn>7 | tColumn<0) break;
+            if (tLine > 7 || tLine < 0 || tColumn > 7 || tColumn < 0) break;
+            isNullCell = chessBoard.board[tLine][tColumn] == null;
+            if (tLine == toLine && tColumn == toColumn) return isRightDestination(chessBoard, toLine, toColumn);
+            if (!isNullCell) break;
         }
 
         return false;
